@@ -108,6 +108,8 @@
         var vStrHtml = '';
         var vCtr = 0;
         var vTkp = true;
+        var vJmlBarang = 1;
+        var vJml = 0;
 
         $("#idInpTglPenjualan").datepicker({
             minDate: 0, 
@@ -129,26 +131,32 @@
         $('#idTblBodyBarang').append(vStrHtml);
 
         $('.clBtnTambahBrang').click(function () {
-            var vJmlBarang = 1;
+            
             
             var vDataBarangDetail = JSON.parse($(this).attr('dataBarang'));
             var vHargaBarang = vDataBarangDetail.harga;
             var vStrHtmlTrasaksi = '';
             
-            debugger;
+
             $('.clNmBarang').each(function (i, d) {
                 debugger;
+                
                 if (vDataBarangDetail.ID == parseInt($(this).attr('dataID'))) {
                     vTkp = false;
+                    
+                    vJmlBarang = $(this).parent().parent().find('td input:text.clJmlBarang').val();
+                    vJmlBarang++;
+                    $(this).parent().parent().find('td input:text.clJmlBarang').val(vJmlBarang);
+                    vHargaBarang = vJmlBarang * vHargaBarang;
+                    $(this).parent().parent().find('td input:text.clHargaBarang').val(vHargaBarang);
+                    debugger;
                 }
             });
             
             if (vTkp == false) {
                 debugger;
-                vJmlBarang++;
-                $('.clJmlBarang').val(vJmlBarang);
-                vHargaBarang = vJmlBarang * vHargaBarang;
-                $('.clHargaBarang').val(vHargaBarang);
+                
+                
                 vCtr = 1;
                 vTkp = true;
             } else {
@@ -158,6 +166,7 @@
 
             if (vCtr == 0) {
                 debugger;
+                vJmlBarang = 1;
                 vStrHtmlTrasaksi = vStrHtmlTrasaksi + '<tr>' +
                     '<td><input type="text" class="clNmBarang" dataID="' + vDataBarangDetail.ID + '" value=" ' + vDataBarangDetail.NamaBarang + '" /></td>' +
                     '<td><input type="text" class="clJmlBarang" value=" ' + vJmlBarang + '" /></td>' +
