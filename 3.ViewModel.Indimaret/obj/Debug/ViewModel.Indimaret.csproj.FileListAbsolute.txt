@@ -1,0 +1,4 @@
+C:\Batch196\day16\sIndimaret\3.ViewModel.Indimaret\bin\Debug\3.ViewModel.Indimaret.dll
+C:\Batch196\day16\sIndimaret\3.ViewModel.Indimaret\bin\Debug\3.ViewModel.Indimaret.pdb
+C:\Batch196\day16\sIndimaret\3.ViewModel.Indimaret\obj\Debug\3.ViewModel.Indimaret.dll
+C:\Batch196\day16\sIndimaret\3.ViewModel.Indimaret\obj\Debug\3.ViewModel.Indimaret.pdb

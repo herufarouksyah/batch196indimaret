@@ -1,0 +1,145 @@
+﻿
+<div class="row">
+    <div class="col-md-12">
+        <div class="table-responsive">
+            <table class="table">
+                <tr>
+                    <td>
+                        <label for="idInpNoFaktur">No Faktur</label>
+                    </td> 
+                    <td>
+                        <input type="text" class="form-control" id="idInpNoFaktur" placeholder="No Faktur">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="idInpTglPenjualan">Tanggal Penjualan</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" id="idInpTglPenjualan" placeholder="Tanggla Penjualan">
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+    </div>
+</div>
+<button type="button" class="btn btn-primary" id="idBtnTambahBarang">Tambah Data</button>
+
+<br />
+<br />
+<br />
+
+    <label for="idInpPencarian">Pencarian Transaksi</label>
+    <input type="text" class="form-control" id="idInpPencarian" placeholder="Search">
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>Nama</td>
+                        <td>Jumlah</td>
+                        <td>Sub Total</td>
+                        <td>Aksi</td>
+
+                    </tr>
+                </thead>
+                <tbody id="idTblBodyTransaction">
+
+                </tbody>
+            </table>
+        </div>
+        <br />
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-md-6 col-md-offset-4">
+                <div class="table-responsive">
+                    <table class="table">
+                        <tr>
+                            <td>
+                                <input type="text" class="form-control" id="idInpTotalHarga" placeholder="Total Harga">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" class="form-control" id="idInpBayar" placeholder="Bayar">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" class="form-control" id="idInpSisa" placeholder="Sisa">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="col-md-3 col-md-offset-8">
+                                    <button type="button" class="btn btn-success" id="idBtnSubmitTransaction">Submit</button>
+
+                                </div>
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+    </div>
+</div>
+</div>
+    <!-- Modal -->
+    <div class="modal fade" id="idModalBarang" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body" id="idBodyModalBarang">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <td>Nama</td>
+                                    <td>Harga</td>
+                                    <td>Aksi</td>
+                                </tr>
+                            </thead>
+                            <tbody id="idTblBodyBarang"></tbody>
+                        </table>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+<script>
+    var vDataBarang = [
+          { 'ID': 1, 'TokoID': 1, 'KodeBarang': 'KB001', 'NamaBarang': 'Panadol', 'AsalPabrik': 'Bogor', 'harga': 3000, 'JmlBarang': 30, 'LamaKadaluarsa': 10 }
+        , { 'ID': 2, 'TokoID': 1, 'KodeBarang': 'KB002', 'NamaBarang': 'Dekolgen', 'AsalPabrik': 'Bandung', 'harga': 2500, 'JmlBarang': 5, 'LamaKadaluarsa': 40 }
+        , { 'ID': 3, 'TokoID': 1, 'KodeBarang': 'KB003', 'NamaBarang': 'Promag', 'AsalPabrik': 'Jakarta', 'harga': 2000, 'JmlBarang': 12, 'LamaKadaluarsa': 15 }
+        , { 'ID': 4, 'TokoID': 2, 'KodeBarang': 'KB004', 'NamaBarang': 'Vit C', 'AsalPabrik': 'Yogya', 'harga': 500, 'JmlBarang': 23, 'LamaKadaluarsa': 20 }
+    ];
+
+    $(document).ready(function () {
+        var vStrHtml = '';
+        $.each(vDataBarang, function (i, d) {
+            vStrHtml = vStrHtml + '<tr>' +
+                    '<td>' + d.NamaBarang + '</td>' +
+                    '<td>' + d.harga + '</td>' +
+                    '<td><button type = "button" class="btn btn-primary clBtnTambahBrang" > + </button></td>' +
+                '</tr>';
+
+        });
+        
+        $('#idTblBodyBarang').append(vStrHtml);
+
+        $('.clBtnTambahBrang').click(function () {
+            alert('Test');
+        });
+    });
+
+    $('#idBtnTambahBarang').click(function () {
+        $('#idModalBarang').modal('show');
+    });
+</script>

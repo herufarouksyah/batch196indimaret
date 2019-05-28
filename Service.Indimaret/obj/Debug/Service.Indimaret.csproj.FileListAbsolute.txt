@@ -1,0 +1,11 @@
+C:\Batch196\day16\sIndimaret\Service.Indimaret\obj\Debug\Service.Indimaret.csprojResolveAssemblyReference.cache
+C:\Batch196\day16\sIndimaret\Service.Indimaret\bin\Debug\Service.Indimaret.dll
+C:\Batch196\day16\sIndimaret\Service.Indimaret\bin\Debug\Service.Indimaret.pdb
+C:\Batch196\day16\sIndimaret\Service.Indimaret\bin\Debug\1.Model.Indimaret.dll
+C:\Batch196\day16\sIndimaret\Service.Indimaret\bin\Debug\2.Repo.Indimaret.dll
+C:\Batch196\day16\sIndimaret\Service.Indimaret\bin\Debug\EntityFramework.dll
+C:\Batch196\day16\sIndimaret\Service.Indimaret\bin\Debug\1.Model.Indimaret.pdb
+C:\Batch196\day16\sIndimaret\Service.Indimaret\bin\Debug\2.Repo.Indimaret.pdb
+C:\Batch196\day16\sIndimaret\Service.Indimaret\bin\Debug\EntityFramework.xml
+C:\Batch196\day16\sIndimaret\Service.Indimaret\obj\Debug\Service.Indimaret.dll
+C:\Batch196\day16\sIndimaret\Service.Indimaret\obj\Debug\Service.Indimaret.pdb
